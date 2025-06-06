@@ -1,0 +1,11 @@
+{% extends 'katalog/base.html' %}
+{% block content %}
+<h2>Daftar Produk</h2>
+<ul class="list-group">
+    {% for produk in produk_list %}
+    <li class="list-group-item">
+        <a href="/produk/{{ produk.id }}/">{{ produk.nama }}</a>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}
